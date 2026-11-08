@@ -21,10 +21,9 @@ Scope {
   property real level: 0         // average of all bands (overall loudness)
 
   // ---------- look and feel: tweak here ----------
-  property int lineCount: 6             // how many lines in the ribbon
+  property int lineCount: 6             // how many lines in the ribbon (Do not increase if you have (like me) a potato for a PC
   property real fade: 0.50              // higher = shorter trails
-  property real intensity: 2.5
-  // higher that 1 = bigger lines; lower than 1 = smaller lines
+  property real intensity: 2.5          // higher that 1 = bigger lines; lower than 1 = smaller lines
 
   property color colBg: Config.colors.bg
   property color colBgDark: Config.colors.bgDark
@@ -43,15 +42,6 @@ Scope {
   property color colWhite: Config.colors.white
 
   function withAlpha(c, a) { return Qt.rgba(c.r, c.g, c.b, a); }
-
-  // x goes 0 -> 1 over  seconds and the result should go 0 -> 1 too.
-  // Linear for now: comment it out and uncomment another one (or write your own) to tinker.
-  function ease(x) {
-    return x;                                                          // linear
-    // return x * x;                                                   // ease in
-    // return 1 - (1 - x) * (1 - x);                                   // ease out
-    // return x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2;  // ease in-out
-  }
 
   IpcHandler {
     target: "musicvisualizer"
