@@ -27,6 +27,7 @@ PanelWindow {
   property color colCrystalGreen: Config.colors.crystalGreen
   property color colPurple: Config.colors.purple
   property color colCyan: Config.colors.cyan
+  property color colWhite: Config.colors.white
 
   property string fontFamily: Config.bar.fontFamily
   property int fontSize: Config.bar.fontSize

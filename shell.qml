@@ -17,4 +17,6 @@ Scope {
   }
 
   AppLauncher { }
+
+  MusicVisualizer { }
 }

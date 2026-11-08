@@ -22,6 +22,7 @@ PanelWindow {
   property color colCrystalGreen: Config.colors.crystalGreen
   property color colPurple: Config.colors.purple
   property color colCyan: Config.colors.cyan
+  property color colWhite: Config.colors.white
 
   property color accentIcon: Config.colors.purple
   property color accentFill: Config.colors.bg

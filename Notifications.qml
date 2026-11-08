@@ -26,6 +26,7 @@ Scope {
   property color colCrystalGreen: Config.colors.crystalGreen
   property color colPurple: Config.colors.purple
   property color colCyan: Config.colors.cyan
+  property color colWhite: Config.colors.white
 
   ListModel {
     id: history
@@ -76,6 +77,20 @@ Scope {
     color: "transparent"
     exclusionMode: ExclusionMode.Ignore
     visible: true
+
+    // Only the area occupied by notification cards receives mouse input.
+    // The rest of this 380x1080 window passes clicks through to the desktop.
+    mask: Region {
+      item: popupHitRegion
+    }
+
+    Item {
+      id: popupHitRegion
+      anchors.top: parent.top
+      anchors.left: parent.left
+      width: popupWindow.width
+      height: Math.min(popupListView.contentHeight, popupWindow.height)
+    }
 
     ListView {
       id: popupListView

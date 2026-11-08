@@ -14,6 +14,7 @@ const colors = {
   crystalGreen:  "#b4f9f8",
   purple:        "#bb9af7",
   cyan:          "#2ac3de",
+  white:         "#c0caf5",
 }
 
 const bar = {
